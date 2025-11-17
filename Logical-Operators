@@ -1,0 +1,52 @@
+public class BasicMath {
+
+    public static void multiply(int num1, int num2) {
+        System.out.println(num1 + " x " + num2 + " = " + (num1 * num2));
+    }
+
+    public static void addition(int num1, int num2) {
+        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+    }
+
+    public static void division(int num1, int num2) {
+        System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+    }
+
+    public static void subtraction(int num1, int num2) {
+        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+    }
+
+    public static void main(String[] args) {
+
+        if (args.length != 3) {
+            System.out.println("Usage: java BasicMath <num1> <operation> <num2>");
+            System.out.println("Operations: +, -, x, /");
+            return;
+        }
+
+        int num1 = Integer.parseInt(args[0]);
+        String operation = args[1];
+        int num2 = Integer.parseInt(args[2]);
+
+        switch (operation) {
+            case "+":
+                addition(num1, num2);
+                break;
+
+            case "-":
+                subtraction(num1, num2);
+                break;
+
+            case "x":
+                multiply(num1, num2);
+                break;
+
+            case "/":
+                division(num1, num2);
+                break;
+
+            default:
+                System.out.println("Invalid operation! Use +, -, x, /");
+        }
+    }
+}
