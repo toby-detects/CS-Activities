@@ -1,0 +1,26 @@
+public class Main {
+    public static void main(String[] args) {
+
+        int[] score = {72, 85, 90, 78, 99, 92, 88, 75, 82, 74};
+
+        int first = score[0];
+        int last = score[score.length - 1];
+
+        int lowest = score[0];
+        int highest = score[0];
+
+        for (int num : score) {
+            if (num < lowest) {
+                lowest = num;
+            }
+            if (num > highest) {
+                highest = num;
+            }
+
+            System.out.println(first  + " " + last + " " + lowest + " " + highest);
+
+
+        }
+
+    }
+}
